@@ -1,5 +1,5 @@
 # Web-Dev-project
-#Imdb clone
-#Kuanysh Spandiyar
-#Yrzakul Bayazid
-#Abdumalik Aidos
+# Imdb clone
+# Kuanysh Spandiyar
+# Yrzakul Bayazid
+# Abdumalik Aidos
