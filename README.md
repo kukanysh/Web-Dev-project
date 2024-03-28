@@ -1,5 +1,6 @@
 # Web-Dev-project
-# Imdb clone
-# Kuanysh Spandiyar
-# Yrzakul Bayazid
-# Abdumalik Aidos
+This is the project for Web Development Course - IMDB clone
+# Group Members
+- Kuanysh Spandiyar
+- Yrzakul Bayazid
+- Abdumalik Aidos
