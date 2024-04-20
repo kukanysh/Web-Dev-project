@@ -1,0 +1,62 @@
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgb(105, 175, 201);
+  color: #fff;
+  display: flex;
+  padding: 0 16px;
+  align-items: center;
+  height: 56px;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  margin-right: 50px;
+}
+
+.nav .myapp {
+  background-color: transparent;
+  color: #fff;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  border: white;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+
+
+.nav .home {
+  background-color: transparent;
+  color: #fff;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  border: white;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.nav .about {
+  background-color: transparent;
+  color: #fff;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  border: white;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.nav .contact {
+  background-color: transparent;
+  color: #fff;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  border: white;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.nav .cart {
+  background-color: transparent;
+  color: #fff;
+  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
+  border: white;
+  display: inline-block;
+  margin-right: 50px;
+}
+
+
