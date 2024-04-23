@@ -1,62 +1,38 @@
-.nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background-color: rgb(105, 175, 201);
-  color: #fff;
+.navbar {
   display: flex;
-  padding: 0 16px;
+  justify-content: space-between;
   align-items: center;
-  height: 56px;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  margin-right: 50px;
+  padding: 10px;
+  background-color: #ff7d7d;
+  color: white;
 }
 
-.nav .myapp {
+.logo img {
+  height: 50px; /* Adjust as needed */
+}
+
+.buttons-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons button {
+  margin: 0 10px;
+  padding: 5px 10px;
   background-color: transparent;
-  color: #fff;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  border: white;
-  display: inline-block;
-  margin-right: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  font-family: "Arial Rounded MT Bold";
+  font-style: normal;
 }
 
-
-
-.nav .home {
-  background-color: transparent;
-  color: #fff;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  border: white;
-  display: inline-block;
-  margin-right: 50px;
+.buttons button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
-
-.nav .about {
-  background-color: transparent;
-  color: #fff;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  border: white;
-  display: inline-block;
-  margin-right: 50px;
-}
-
-.nav .contact {
-  background-color: transparent;
-  color: #fff;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  border: white;
-  display: inline-block;
-  margin-right: 50px;
-}
-
-.nav .cart {
-  background-color: transparent;
-  color: #fff;
-  font: 500 25px/37px Roboto, "Helvetica Neue", sans-serif;
-  border: white;
-  display: inline-block;
-  margin-right: 50px;
-}
-
-
