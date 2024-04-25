@@ -1,17 +1,28 @@
 from rest_framework import serializers
-from .models import Category, Product
+from api.models import Category, Product
+
+from backend.api.models import Cart
+
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
-        fields = ['id', 'name']
+        fields = '__all__'
 
 class ProductSerializer(serializers.Serializer):
-    id = serializers.IntegerField()
-    name = serializers.CharField(max_length=255)
-    brand = serializers.CharField(max_length=100)
-    description = serializers.TextField()
+    name = serializers.CharField(max_length=100)
     price = serializers.FloatField()
-    #image = serializers.ImageField()
-    rating = serializers.FloatField()
-    category = serializers.PrimaryKeyRelatedField(queryset=Category.objects.all())
+    description = serializers.CharField(max_length=255)
+    category = CategorySerializer()
+
+
+class OrderSerializer(serializers.Serializer):
+    class Meta:
+        model = Product
+        fields = '__all__'
+
+
+class CartSerializer(serializers.ModelSerializer)
+    class Meta:
+        model = Product
+        fields = '__all__'

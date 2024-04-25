@@ -1,45 +1,37 @@
-import { Component, OnInit  } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import { Category } from '../models';
-import { AppService } from '../app.service'
-import { RouterModule } from '@angular/router';
-import { CommonModule } from '@angular/common';
+import {ProductsListService} from "../products-list.service";
+import {Observable} from "rxjs";
+import {Product} from "../models";
+import {AsyncPipe} from "@angular/common";
 
 @Component({
   selector: 'app-products-list',
   standalone: true,
   imports: [
     RouterLink,
-    RouterModule,
-    CommonModule,
+    AsyncPipe
   ],
   templateUrl: './products-list.component.html',
   styleUrl: './products-list.component.css'
 })
-export class ProductsListComponent implements OnInit {
+export class ProductsListComponent implements OnInit{
 
-  products: Category[] = [];
-  loaded: boolean;
-  constructor(private appservice: AppService) {
-    this.loaded = false;
+  products: Observable<Product[]> = new Observable<Product[]>();
+  constructor(private productservice: ProductsListService) {
+    this.products = new Observable<Product[]>();
   }
 
-  ngOnInit(): void {
-    this.getCategories();
+  ngOnInit() {
+    console.log("inside ng")
+    this.reloadData()
+  }
+
+  reloadData() {
+    this.products = this.productservice.getProductList()
   }
 
   addToCart() {
-    // Implement your logic to add the item to the cart here
-    console.log('Item added to cart');
-    // You can also call a service method to add the item to the cart
+
   }
-
-  getCategories():void{
-    this.appservice.getCategories().subscribe((data) => {
-      this.products = data;
-      this.loaded = true;
-    });
-  }
-
-
 }

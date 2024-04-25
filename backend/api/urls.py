@@ -1,11 +1,12 @@
-from django.urls import path, include
-
-from api.views import *
+from django.contrib import admin
+from django.urls import path
+from api.views import CategoryListAPIView, CategoryDetailAPIView, ProductListAPIView, ProductDetailAPIView
+from api.views import category_products
 
 urlpatterns = [
-    path('products/', get_products),
-    path('products/<int:pk>', get_product),
-    path('categories/', get_categories),
-    path('categories/<int:pk>',get_category),
-    path('categories/<int:pk>/products', product_list_by_category)
+    path('categories/', CategoryListAPIView.as_view()),
+    path('categories/<int:category_id>/', CategoryDetailAPIView.as_view()),
+    path('categories/<int:category_id>/products', category_products),
+    path('products/', ProductListAPIView.as_view()),
+    path('products/<int:product_id>/', ProductDetailAPIView.as_view()),
 ]

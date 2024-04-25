@@ -2,7 +2,8 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="flex flex-wrap -m-4">
       <div class="lg:w-1/4 md:w-1/2 p-4 w-full" *ngFor="let product of products">
-        <a [routerLink]="'/your-route'">
+        {{product.name}}
+
           <a class="block relative h-48 rounded overflow-hidden">
             <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260">
           </a>
@@ -12,18 +13,7 @@
             <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" (click)="addToCart()">Add to Cart</button>
             <p class="mt-1">$16.00</p>
           </div>
-        </a>
       </div>
     </div>
   </div>
 </section>
-
-<h2>Product List</h2>
-
-<ul *ngIf="loaded">
-  <li *ngFor="let product of products">
-    <a [routerLink]="['/companies', product.id]">{{ product.id }} {{ product.name }}</a>
-  </li>
-</ul>
-
-<p *ngIf="!loaded">Loading album list...</p>
